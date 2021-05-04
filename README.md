@@ -15,8 +15,8 @@
 -----
 ## Fecha y Lugar
 :spiral_calendar: Martes 4 de mayo del 2021  
-:alarm_clock:     8:00 pm - 1pm  
-:hotel:           Universidad Tecnológica Nacional- Facultad Regional Córdoba- Maestro M. Lopez esq. Cruz Roja, Córdoba.
+:alarm_clock:     8:00 pm - 10:00 pm  
+:hotel:           Universidad Los Libertadores.
  
 
 ## Descripción
