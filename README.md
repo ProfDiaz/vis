@@ -65,7 +65,7 @@ easypackages::libraries("tidyverse", "gapminder","babynames","survey","socviz","
 
 ## :writing_hand: Slides y Código  
 
-Tanto la [presentación](https://github.com/ProfDiaz/vis/blob/master/material/PRESENTACION_DataViz.pdf) como los [archivos rmarkdown](https://github.com/PatriLoto/viz-datos-con-ggplot2-para-WIDS2020/blob/master/material) se encuentran en la carpeta **Material**. 
+Tanto la [presentación](https://github.com/ProfDiaz/vis/blob/master/material/PRESENTACION_DataViz.pdf) como los [archivos rmarkdown](https://github.com/ProfDiaz/vis/blob/master/material) se encuentran en la carpeta **Material**. 
  
 
 ## :notebook: **Bibliografía** 
