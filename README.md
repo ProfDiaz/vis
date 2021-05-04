@@ -8,7 +8,7 @@
 
 
 
-### **by Diana Diaz / temlate from Patricia A. Loto**
+### **by Diana Diaz (template from Patricia A. Loto)**
 
 
 
