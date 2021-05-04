@@ -1,5 +1,5 @@
 
-# Visualisacion de datos
+# Visualización de datos con R
   ## Workshop
 
 
