@@ -1,7 +1,7 @@
 ---
 title: "Visualización de datos en R y con ggplot2"
 subtitle: "Barcharts"
-author: "Patricia Loto"
+author: "Diana Diaz and Patricia Loto"
 date: "05-03-2020"
 output:
    html_document:
@@ -268,26 +268,26 @@ A continuación, modificaremos el color y el tamaño tanto del título como de l
 
 
 ```{r theme_bw,  message=FALSE, warning=FALSE, echo=TRUE, fig.align='center', fig.height=6, fig.width=8,  fig.show = "hold", tidy=TRUE}
-
-ggplot(data=subset_propina, aes(x= time, y= total_bill, fill= sex))+
-       geom_bar(stat = "identity", position= "dodge", 
-           width= .7, color= "#2c204d") +
-       scale_fill_manual(values= c("#713580", "#41b6a6"), labels= c('Mujeres', 'Hombres')) +
-       scale_x_discrete(limit= c("Lunch", "Dinner"), labels= c("Almuerzo", "Cena")) +
-       scale_y_continuous(labels = scales::dollar)+
-       labs(x=" ", y="Propina", title="¿Quién da más propina?", fill= ' ') + 
-       theme_classic()+ 
-       theme(text = element_text(size=14, face = 'bold', color = "#2c204d"),
-             plot.title = element_text(size=18,                     #cambiamos el tamaño, fuente y color del título
-                                   family ="Garamond",    
-                              hjust = 0.5,vjust = 1,
-                              colour = "#2c204d", 
-                              face = 'bold', 
-                              margin = margin(b = 12 * 1.2)),
-             legend.position="top",legend.text= element_text(color="#2c204d", 
-             size= 12, hjust = 0.5,vjust = 1, family ="Garamond"))   #cambiamos tamaño, fuente y color de la leyenda      
-      
-
+# 
+# ggplot(data=subset_propina, aes(x= time, y= total_bill, fill= sex))+
+#        geom_bar(stat = "identity", position= "dodge", 
+#            width= .7, color= "#2c204d") +
+#        scale_fill_manual(values= c("#713580", "#41b6a6"), labels= c('Mujeres', 'Hombres')) +
+#        scale_x_discrete(limit= c("Lunch", "Dinner"), labels= c("Almuerzo", "Cena")) +
+#        scale_y_continuous(labels = scales::dollar)+
+#        labs(x=" ", y="Propina", title="¿Quién da más propina?", fill= ' ') + 
+#        theme_classic()+ 
+#        theme(text = element_text(size=14, face = 'bold', color = "#2c204d"),
+#              plot.title = element_text(size=18,                     #cambiamos el tamaño, fuente y color del título
+#                                    family ="Garamond",    
+#                               hjust = 0.5,vjust = 1,
+#                               colour = "#2c204d", 
+#                               face = 'bold', 
+#                               margin = margin(b = 12 * 1.2)),
+#              legend.position="top",legend.text= element_text(color="#2c204d", 
+#              size= 12, hjust = 0.5,vjust = 1, family ="Garamond"))   #cambiamos tamaño, fuente y color de la leyenda      
+#       
+# 
 
 
 ```
@@ -318,29 +318,29 @@ El paquete `ggtext` permite extender las funcionalidades de ggplot2, mediante la
 
 
 ```{r grafico_ggtext ,  message=FALSE, warning=FALSE, echo=TRUE, fig.align='center', fig.height=6, fig.width=8,  fig.show = "hold", highlight=TRUE, tidy=TRUE}
-
-ggplot(data=subset_propina, aes(x= time, y= total_bill, fill= sex))+
-       geom_bar(stat = "identity", position="dodge", 
-           width= .7, color= "#2c204d")+
-       scale_fill_manual(values= c("#713580", "#41b6a6"), labels= c('Mujeres', 'Hombres'))+
-       scale_x_discrete(limit= c("Lunch", "Dinner"), labels= c("Almuerzo", "Cena"))+
-       scale_y_continuous(labels = scales::dollar)+
-       labs(x=" ", y="Propina", title="¿Quién da más propina?",
-       subtitle = "¿<span style='color:#41b6a6'>Hombres</span> o <span  style='color:#713580'> Mujeres</span>?")+ 
-       theme_classic()+ 
-       theme(text = element_text(size=14, face = 'bold', color = "#2c204d"),
-             plot.title = element_text(size= 18,            #cambiamos el tamaño, fuente y color del título
-                                   family = "Garamond",    
-                              hjust = 0.5,vjust = 1,
-                              colour = "#2c204d", 
-                              face = 'bold', 
-                              margin = margin(b = 12 * 1.2)),
-             plot.subtitle = element_markdown(hjust = 0.5,vjust = 1),
-             legend.position= "none",legend.text= element_text(color= "#2c204d", 
-                size= 12, hjust = 0.5,vjust = 1, family = "Garamond")) #cambiamos tamaño, fuente y color de la leyenda      
-
-
-ggsave(here("grafico_ggtext.png"), height = 8, width = 6, units = "in", type='cairo')
+# 
+# ggplot(data=subset_propina, aes(x= time, y= total_bill, fill= sex))+
+#        geom_bar(stat = "identity", position="dodge", 
+#            width= .7, color= "#2c204d")+
+#        scale_fill_manual(values= c("#713580", "#41b6a6"), labels= c('Mujeres', 'Hombres'))+
+#        scale_x_discrete(limit= c("Lunch", "Dinner"), labels= c("Almuerzo", "Cena"))+
+#        scale_y_continuous(labels = scales::dollar)+
+#        labs(x=" ", y="Propina", title="¿Quién da más propina?",
+#        subtitle = "¿<span style='color:#41b6a6'>Hombres</span> o <span  style='color:#713580'> Mujeres</span>?")+ 
+#        theme_classic()+ 
+#        theme(text = element_text(size=14, face = 'bold', color = "#2c204d"),
+#              plot.title = element_text(size= 18,            #cambiamos el tamaño, fuente y color del título
+#                                    family = "Garamond",    
+#                               hjust = 0.5,vjust = 1,
+#                               colour = "#2c204d", 
+#                               face = 'bold', 
+#                               margin = margin(b = 12 * 1.2)),
+#              plot.subtitle = element_markdown(hjust = 0.5,vjust = 1),
+#              legend.position= "none",legend.text= element_text(color= "#2c204d", 
+#                 size= 12, hjust = 0.5,vjust = 1, family = "Garamond")) #cambiamos tamaño, fuente y color de la leyenda      
+# 
+# 
+# ggsave(here("grafico_ggtext.png"), height = 8, width = 6, units = "in", type='cairo')
 
 
 ```
@@ -352,6 +352,6 @@ ggsave(here("grafico_ggtext.png"), height = 8, width = 6, units = "in", type='ca
 
 Los siguientes recursos son gratutitos y se pueden acceder de manera online:
 
-* [Rcoobook](http://www.cookbook-r.com/Graphs/) - Capítulo 8.1: [Bar graphs](http://www.cookbook-r.com/Graphs/Bar_and_line_graphs_(ggplot2)/)
+* [Rcookbook](http://www.cookbook-r.com/Graphs/) - Capítulo 8.1: [Bar graphs](http://www.cookbook-r.com/Graphs/Bar_and_line_graphs_(ggplot2)/)
 
 * [R para Ciencia de Datos](https://es.r4ds.hadley.nz/) - Capítulo 3: [Visualización de datos](https://es.r4ds.hadley.nz/visualizaci%C3%B3n-de-datos.html)
